@@ -31,6 +31,7 @@ while True:
   (a,b) = idc.split('(',1)
   (address,therest) = b.split(',',1)
   address = address.lower()
+  indx2 = -1
   while True:
    bytecount += 4
    marker = eval(address)-0x10000000
@@ -65,8 +66,6 @@ while True:
     tmatch = r.search(newfile,indx + 1) 
     if tmatch: 
      indx2 = tmatch.start()
-    else:
-     indx2 = -1    
     if indx2 <0 and bytecount >= 12:     # found unique match and long enough(3 instructions)
      strinx = idc.find("0X")
      if strinx == -1: strinx = idc.find("0x")
