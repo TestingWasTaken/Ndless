@@ -29,4 +29,4 @@ dist: all
 	rm dist/ndless/downgradefix_3.9*.tns dist/ndless/ndless_installer_3.9.0_classic.tns
 	cp ndless-sdk/samples/*/*.tns dist/ndless/samples/
 	rm dist/ndless/samples/freetype_demo.tns
-	cd dist && 7z a ndless.zip ndless
+	cd dist/ndless && 7z a ../ndless.zip .
